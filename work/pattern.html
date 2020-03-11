@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>my title</title>
+        <script type="text/javascript">
+            var a=0;
+            var b=4;
+            for(var i=0; i<=6; i++)
+            {
+                for(var  j=0; j<=4; j++)
+                {
+                    if ((j==0) || (i==j+2 && j>1))
+                    { 
+                        document.write("*");
+                    }
+                    else if ((i==a && j==b) && j>0)
+                    { 
+                        document.write("*" );
+                        a=a+1;
+                        b=b-1;
+                    }
+                    else
+                    { 
+                        document.write("&#160; ");
+                    }
+                }
+                document.write('<br>');
+            }
+
+            for(var i=0; i<=6; i++)
+            {
+                for(var j=0; j<=4; j++)
+                {
+                    if(j==0 || (j==4 && (i==1 || i==2)) || ((i==0 || i==3) && (j>0 && j<4)))
+                    {
+                        document.write("*");
+                    }
+                    else
+                    {
+                        document.write("&#160;");
+                    }
+                }
+                document.write('<br>');
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+
+</html>
